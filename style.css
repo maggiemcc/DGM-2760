@@ -134,4 +134,11 @@ main h2{
     font-size: .8rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 100%;
+    vertical-align: middle;
+  }
+  footer img {
+    width: 55px;
+    padding-left: 15px;
+    /* border: 1px solid red; */
+    vertical-align: middle;
   }
