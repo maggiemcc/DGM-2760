@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>02 Guessing Game</title>
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<header>
+    <h1></h1>
+    <h2></h2>
+</header>
+
+<main>
+    <h1>Hi/Lo Guessing Game</h1>
+    <h2>What I Learned</h2>
+    <ul class="objectives">
+        <li>Generate a random number using JavaScript.</li>
+        <li>Round numbers using the Math JavaScript class.</li>
+        <li>Write JavaScript code that listens and reacts to user click events.</li>
+        <li>Use switch statements to implement conditional logic.</li>
+        <li>Use if... else statements to make decisions.</li>
+        <li>Create DOM elements using JavaScript.</li>
+        <li>Set attribute values of DOM elements using JavaScript.</li>
+        <li>Append child elements to other DOM elements using JavaScript.</li>        
+    </ul>
+
+    <h2>Instructions</h2>
+    <p>In this game you try to guess a random number between 1 and 15 in as few tries as possible. You will be rewarded a ribbon for your skills. Good luck to you. If you would like to play again, refresh the page.</p>
+
+    <section>
+    <article class="a1">
+        <h2>Play</h2>
+        <div>
+            <input id="guess" type="number" placeholder="number"/>
+            <button onclick="evalGuess()">Guess</button>
+        </div>
+    </article>
+
+    <article class="a2">
+        <h2>Trys</h2>
+        <div id="attempts">
+            
+        </div>
+    </article>
+
+    <article class="a3">
+        <h2>Feedback</h2>
+        <div id="feedback">
+            
+        </div>
+    </article>
+
+    <article class="a4">
+        <h2>Award</h2>
+        <div id="ribbon">
+            
+        </div>
+    </article>
+</section>
+</main>
+<footer>
+    <p>Assignment for DGM2760 by Maggie McCausland</p>
+</footer>
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
