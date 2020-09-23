@@ -7,9 +7,9 @@
 
   header {
    position: relative;
-   height: 470px;
+   height: 100%;
    width: 100%;
-   contain: content;
+   padding-bottom: 2%;
   }
   
   header h1 {
@@ -191,14 +191,14 @@ main h2{
       margin: 0 auto;
     }
 
-    /* PROJECTS */
+/* PROJECTS */
     
-    .projects-section {
-      text-align: center;
-      justify-content: center;
-      padding: .5rem 4% 0 4%;
-      margin: 0;
-     }
+  .projects-section {
+    text-align: center;
+    justify-content: center;
+    padding: .5rem 4% 0 4%;
+    margin: 0;
+  }
 
   .project {
     background: rgb(181, 183, 184);
@@ -213,3 +213,10 @@ main h2{
   }
 
   }
+
+  /*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
