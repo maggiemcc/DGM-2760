@@ -77,9 +77,27 @@ function giveAward() {
     const ribbon = document.querySelector('#ribbon')
 
     // Note: Only appendchild if the ribbon element doesn't have any child nodes yet
-    ribbon.appendChild(awardImage)
+    // ribbon.appendChild(awardImage)
     
-    // attempt at Node.hasChildNodes()
+    if (ribbon.hasChildNodes(awardImage)) {
+        let award = ribbon.childNodes;
+      
+        for (let i = 0; i < award.length && award.length < 2; i++) {
+            ribbon.appendChild(awardImage);
+        }}
+
+ // attempts at Node.hasChildNodes()
+    // const ribbon = document.querySelector('#ribbon');
+    // if (ribbon.hasChildNodes()) {
+    //     ;(function(awardImage) {
+    //         ribbon.hasChildNodes = ribbon.hasChildNodes || function() {
+    //           return !!this.firstChild;
+    //         }
+    //       })(Node.awardImage);
+    // }
+    
+
+
     // if (ribbon.hasChildNodes(awardImage)) {
     //     ribbon.hasChildNodes = ribbon.hasChildNodes || 
     //     function() {return !!this.firstChild;}
