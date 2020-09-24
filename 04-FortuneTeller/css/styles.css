@@ -1,0 +1,124 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*---- BODY ----*/
+body {background-color: rgb(240, 240, 240);}
+
+main, header, footer {
+    max-width: 960px;
+    padding-top: 1rem; 
+    margin: 0 auto;
+    background-color: white;}
+
+h1 {
+    font-size: 2.8rem; 
+    font-weight: 700; 
+    margin: 0; 
+    font-family: 'Grenze Gotisch', cursive;
+}
+
+h2 {
+    font-size: 2rem; 
+    margin: 0; 
+    font-family: 'Grenze Gotisch', cursive;
+}
+
+
+/*---- HEADER ----*/
+header {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    height: 300px;
+    text-shadow: 3px 2px 2px #000;
+    color: white;
+}
+
+header h1, header h2 {padding-left: 2%;}
+
+header h2 {font-weight: 400;}
+
+
+/*---- MAIN ----*/
+main {padding-bottom: 2.5rem;}
+main h1, main h2, main p {padding: 0 1rem;}
+
+main h1 {
+    padding-bottom: .5rem;
+    text-shadow: 3px 3px 3px rgb(185, 184, 184); 
+    font-weight: 800;
+}
+
+main h2 {color: rgb(0, 24, 131);}
+
+
+main ul {padding-right: 2%;}
+
+main ul li {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 1rem;
+    padding-bottom: .5rem;
+}
+
+main ul li a {
+    padding-left: .5rem;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+main ul li:before {
+        content: '';
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+        background-image: url("../images/crystal-ball.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+}
+
+
+main p {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 2%;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(0, 24, 131);
+    color: white;
+    padding: .5rem 5%;
+    border-radius: 30px;
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+/*---- FOOTER ----*/
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: .7rem 0;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
