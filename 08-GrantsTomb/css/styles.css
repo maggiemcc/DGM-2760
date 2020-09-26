@@ -1,5 +1,6 @@
 /* GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 /*---- BODY ----*/
 body {background-color: rgb(240, 240, 240); font-family: 'Teko', sans-serif;}
@@ -64,6 +65,7 @@ main ul li {
     padding-bottom: .5rem;
     font-size: 1rem;
     line-height: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
 
