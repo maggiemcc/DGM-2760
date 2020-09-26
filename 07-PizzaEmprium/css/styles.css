@@ -1,0 +1,169 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&display=swap');
+
+/*---- BODY ----*/
+body {background-color: rgb(240, 240, 240); font-family: 'Roboto Slab', serif;}
+
+main, header, footer {
+    max-width: 960px;
+    padding-top: 1rem; 
+    margin: 0 auto;
+    background-color: white;}
+
+h1 {
+    font-size: 2.4rem; 
+    font-weight: 900; 
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+/*---- HEADER ----*/
+header {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    height: 300px;
+    color: #9b1503;
+    text-shadow: 3px 3px 3px rgb(185, 184, 184); 
+}
+
+header h1, header h2 {padding-left: 2%;}
+
+header h2 {color: #000;}
+
+
+/*---- MAIN ----*/
+main {padding-bottom: 2.5rem;}
+main h1, main h2, main p {padding: 0 1rem;}
+
+main h1 {
+    padding-bottom: .5rem;
+    text-shadow: 3px 3px 3px rgb(185, 184, 184);
+    color:  #9b1503;
+}
+
+main h2 {
+    color: #e77000; 
+    font-size: 1.5rem;
+    /* padding-top: 1.3rem; */
+    text-shadow: 1px 1px 1px rgb(185, 184, 184); 
+}
+
+main p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #000;
+    padding: 2% 2% 0 2%;
+    min-height: 90px;
+}
+
+
+main ul {padding-right: 2%;}
+
+main ul li {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 1rem;
+    padding-bottom: .5rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+main ul li a {
+    padding-left: .5rem;
+    vertical-align: middle;
+}
+
+main ul li:before {
+        content: '';
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        background-image: url("../images/italian-pizza-cut-into-slices.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+}
+
+section#order {
+    border: 3px dashed black;
+    border-radius: 15px;
+    padding: 2% 2%;
+    margin: 1rem 3%;
+}
+
+section#order hr {
+    border: 1px solid black;
+    margin-bottom: 2%;
+}
+
+div#optionContainer, div#buttonContainer {
+    contain: content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 3px;
+    min-height: 130px;
+}
+
+div#optionContainer div#crust, div#optionContainer div#topping, div#optionContainer div#size, div#buttonContainer div#time, div#buttonContainer div#shop {
+    border-radius: 15px;
+    margin: 0;
+    margin-right: auto;
+    display: block;
+    margin-left: auto;
+    width: 250px;
+    min-width: 200px;
+    /* border: 1px solid green; */
+}
+
+div#buttonContainer div#time h2, div#buttonContainer div#time button, div#buttonContainer div#shop h2, div#buttonContainer div#shop button {
+    display: block;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+/* div#optionContainer section{
+    display: block;
+} */
+
+div#optionContainer h2, div#buttonContainer h2 {padding: 0;}
+
+div#buttonContainer div#time button, div#buttonContainer div#shop button {
+    margin-top: 1rem;
+    background-color: #9b1503;
+    color: white;
+    padding: .5rem 2%;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 190px;
+    font-weight: 400;
+}
+
+
+div#buttonContainer div#time button:hover, div#buttonContainer div#shop button:hover {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/*---- FOOTER ----*/
+footer {
+    background-color: #9b1503;
+    color: #fff;
+    text-align: center;
+    padding: .7rem 0;
+}
