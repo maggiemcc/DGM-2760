@@ -1,0 +1,145 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;700&display=swap');
+
+/*---- BODY ----*/
+body {background-color: rgb(240, 240, 240); font-family: 'Teko', sans-serif;}
+
+main, header, footer {
+    max-width: 960px;
+    padding-top: 1rem; 
+    margin: 0 auto;
+    background-color: white;}
+
+h1 {
+    font-size: 2.5rem; 
+    font-weight: 900; 
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+/*---- HEADER ----*/
+header {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    height: 300px;
+    color: #e77000; 
+    text-shadow: 3px 3px 3px rgb(0, 0, 0); 
+}
+
+header h1, header h2 {padding-left: 2%;}
+
+header h2 {color: #fff;}
+
+
+/*---- MAIN ----*/
+main {padding-bottom: 2.5rem;}
+main h1, main h2, main p {padding: 0 1rem;}
+
+main h1 {
+    padding-bottom: .5rem;
+    text-shadow: 3px 3px 3px rgb(185, 184, 184);
+    color:#000;
+}
+
+main h2 {
+    color: #e77000; 
+    text-shadow: 1px 1px 1px rgb(0, 0, 0); 
+    margin-bottom: 2%;
+}
+
+
+
+main ul {padding-right: 2%;}
+
+main ul li {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 1rem;
+    padding-bottom: .5rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-weight: 400;
+}
+
+main ul li a {
+    padding-left: .5rem;
+    vertical-align: middle;
+}
+
+main ul li:before {
+        content: '';
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        background-image: url("../images/grave.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+}
+
+
+
+main div#stem, main div.feedback {
+    background-color: #fff;
+    color: #000;
+    width: 96%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.8rem;
+    line-height: 1.9rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 3% 0;
+}
+
+main div.feedback {
+    width: 70%;
+}
+
+main button {
+    margin-bottom: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 70%;
+    border-radius: 10px;
+    background-color: rgb(211, 210, 210);
+    color: #000;
+    font-weight: 400;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    font-family: 'Teko', sans-serif;
+
+    
+}
+
+main button:hover {
+    background-color: #000;
+    color: white;
+    font-weight: 500;
+}
+
+main button:focus {
+    outline: none;
+}
+
+
+
+
+/*---- FOOTER ----*/
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: .7rem 0;
+}
