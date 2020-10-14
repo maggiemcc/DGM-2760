@@ -14,13 +14,13 @@ const pizza = {
     // method
     buildPizza: function () {
         console.log('buildPizza method has been called')
-        message = `We are baking a ${pizza.size} pizza on ${pizza.crust} crust with ${pizza.topping} topping and cheese just for you.`
+        message = `We are baking a ${pizza.size} ${pizza.crust} crust pizza with ${pizza.topping} topping and cheese just for you.`
         document.querySelector('#feedback').textContent = message
     },
 
     shoppingList: () => {
         let flour = 1
-        let top = 1
+        let top = 6
         //  thick pizza
         if (pizza.crust === 'thick') flour *= 2
         if (pizza.crust === 'thick') top *= 1
@@ -31,7 +31,7 @@ const pizza = {
         if (pizza.size === 'large') flour *= 3
         if (pizza.size === 'large') top *= 3
 
-        message = `For a ${pizza.size} ${pizza.crust} crust pizza you will need to purachse ${flour} cups of flour and ${top} lbs of ${pizza.topping}.`
+        message = `For a ${pizza.size} ${pizza.crust} crust pizza you will need to purachse ${flour} cups of flour and ${top} oz of ${pizza.topping}.`
         document.querySelector('#feedback').textContent = message
     }
 
