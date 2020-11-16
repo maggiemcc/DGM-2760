@@ -1,0 +1,30 @@
+{
+    "hotels": [
+        {
+            "name": "Marriott",
+            "rooms": "61",
+            "gym": "Yes",
+            "roomTypes": ["King", " Queen", " Double"],
+            "address": "75 West Center Street",
+            "picture": "images/marriott.jpg"
+        },
+
+        {   
+            "name": "Hilton",
+            "rooms": "23",
+            "gym": "Yes",
+            "roomTypes": ["King", " Double"],
+            "address": "1200 North Beach Drive",
+            "picture": "images/hilton.jpg"
+        },
+
+        {
+            "name": "Sheraton",
+            "rooms": "18",
+            "gym": "No",
+            "roomTypes": ["Suite", " Standard"],
+            "address": "100 East Broadway Street",
+            "picture": "images/sheraton.jpg"
+        }
+    ]
+}

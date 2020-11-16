@@ -1,0 +1,167 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/*---- BODY ----*/
+body {background-color: rgb(240, 240, 240); font-family: 'Roboto', sans-serif;}
+
+main, header, footer {
+    max-width: 960px;
+    padding-top: 1rem; 
+    margin: 0 auto;
+    background-color: white;}
+
+h1 {
+    font-size: 2.5rem; 
+    font-weight: 900; 
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+/*---- HEADER ----*/
+header {
+    background-image: url("../images/hotel.jpg");
+    background-repeat: no-repeat;
+    height: 300px;
+    color: #fff;
+    /* text-shadow: 3px 3px 3px rgb(0, 0, 0);  */
+}
+
+header h1, header h2 {padding-left: 2%;}
+
+header h2 {color: #fff;}
+
+
+/*---- MAIN ----*/
+main {padding-bottom: 2.5rem;}
+main h1, main h2, main h3, main p {padding: 0 1rem;}
+
+main h1 {
+    padding-bottom: .5rem;
+    /* text-shadow: 3px 3px 3px rgb(185, 184, 184); */
+    color:#000;
+}
+
+main h2 {
+    color: #008dce; 
+    font-weight: 900;
+    font-weight: 700;
+    /* text-shadow: 1px 1px 1px rgb(95, 95, 95);  */
+    margin-bottom: 2%;
+}
+
+
+
+main ul {padding-right: 2%;}
+
+main ul li {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 1rem;
+    padding-bottom: .5rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-weight: 400;
+}
+
+main ul li a {
+    padding-left: .5rem;
+    vertical-align: middle;
+}
+
+main ul li:before {
+        content: '';
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        background-image: url("../images/single_bed.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+}
+
+
+.hotels {
+    text-align: center;
+    padding: 2% 0;
+    margin: 1.5rem 0;
+}
+
+
+.hotels li {
+    background-color: rgb(150, 0, 0);
+    display: inline;
+    padding: 1rem 5%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.hotels li:before {
+    background-image: none;
+    height: 0px;
+    width: 0px;
+}
+
+.hotels li a {
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+.nameAddressInfo {
+    text-align: center; 
+    padding: 1rem 0 0 0;
+}
+
+.nameAddressInfo h2 {font-size: 2.3rem;}
+
+
+.hotelData {
+    padding: 1.3rem 2%;
+    text-align: center;
+}
+
+main p {
+    background-color: rgb(0, 92, 134); 
+    color: white;
+    border-radius: 3px;
+    padding: 3% 2%;
+    width: 65%;
+    margin: 2% auto;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+span {
+    font-weight: 400;
+}
+
+
+img#picture {
+    margin: 0 auto;
+    display: flex;
+    border-radius: 3px;
+    width: 85%;
+}
+
+
+
+/*---- FOOTER ----*/
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: .7rem 0;
+}
