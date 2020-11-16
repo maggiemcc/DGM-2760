@@ -9,38 +9,32 @@ async function getHotelData() {
         const response = await fetch('../hotel.json')
         return await response.json() // will return JSON object
 
-    } catch (error) {console.error(error)}
+    } catch (error) {
+        console.error(error)
+    }
 }
 
-// Multiline Then
-// let hotelData = {}
-// getHotelData().then(data => {
-//     hotelData = data
-//     console.log(hotelData)
-// });
-// console.log(hotelData);
 
-
-// Single line Then
 let hotelData = {}
-getHotelData().then(data => hotelData = data);
+getHotelData().then(data => (hotelData = data))
 
 
-document.querySelector('#marriott').addEventListener('click', hotelInfo);
-document.querySelector('#hilton').addEventListener('click', hotelInfo);
-document.querySelector('#sheraton').addEventListener('click', hotelInfo);
+document.querySelector('#marriott').addEventListener('click', hotelInfo)
+document.querySelector('#hilton').addEventListener('click', hotelInfo)
+document.querySelector('#sheraton').addEventListener('click', hotelInfo)
 
 
 function hotelInfo(event) {
     let hotelChoice = hotelData.hotels.find(hotel => {
-        return event.target.id === hotel.name.toLowerCase();
-    });
-    console.log(hotelChoice);
-    document.querySelector("#hotelName").textContent = `The ${hotelChoice.name} Hotel`;
-    document.querySelector("#address").textContent = `${hotelChoice.address}`;
-    document.querySelector("#rooms").textContent = `${hotelChoice.rooms}`;
-    document.querySelector("#gym").textContent = `${hotelChoice.gym}`;
-    document.querySelector("#type").textContent = `${hotelChoice.roomTypes}`;
-    // document.querySelector("#picture").textContent = `${hotelChoice.picture}`;
-    document.querySelector("#picture").src = `${hotelChoice.picture}`;
+        return event.target.id === hotel.name.toLowerCase()
+    })
+
+    console.log(hotelChoice)
+    
+    document.querySelector("#hotelName").textContent = `The ${hotelChoice.name} Hotel`
+    document.querySelector("#address").textContent = `${hotelChoice.address}`
+    document.querySelector("#rooms").textContent = `${hotelChoice.rooms}`
+    document.querySelector("#gym").textContent = `${hotelChoice.gym}`
+    document.querySelector("#type").textContent = `${hotelChoice.roomTypes}`
+    document.querySelector("#picture").src = `${hotelChoice.picture}`
 }
