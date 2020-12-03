@@ -122,7 +122,7 @@ function tellCheckout() {
 
 
     // message containing first and last name, total tickets, and email.
-    const myCheckout = `<span>${customerName}</span>,<br> Thank you for your purchase of <span>${ticketsArray.length}</span> movie ticket(s) for ${showTimes.time}. We hope you will enjoy the show. Your purchase was charged to your card with the expiration date of: <span>${month}/${year}</span>. An email confirmation has been sent to: <span>${email}</span>. Your confirmation number is: <span>${confirmation}</span>`
+    const myCheckout = `<span>${customerName}</span>,<br> Thank you for your purchase of <span>${ticketsArray.length}</span> movie ticket(s) for ${showTimes.time}. We hope you will enjoy the show. Your purchase was charged to your card with the expiration date of: <span>${month}/${year}</span>. An email confirmation has been sent to: <span>${email}</span>. Your confirmation number: <span>${confirmation}</span>`
 
     checkoutResult.innerHTML = myCheckout
     console.log(myCheckout)
