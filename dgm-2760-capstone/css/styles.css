@@ -370,4 +370,17 @@ footer {
 }
 
 .checkout button {margin: 1.5rem auto; width: 85%;}
+
+  /* TICKET CONFIRMATION RESULTS */
+
+  #results {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px solid #000;
+    background-color: #fff;
+  }
+
+  #showText {grid-row: 1;}
+  #showTicket {grid-row: 2;}
 }
