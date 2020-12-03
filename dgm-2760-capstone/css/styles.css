@@ -65,6 +65,9 @@ main h2 {
     text-align: left;
 }
 
+.movieChoices {
+    padding: 2% 2%;
+}
 .movies {
     text-align: center;
 }
@@ -73,10 +76,11 @@ main h2 {
     margin: 2% 2%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2%;
 }
 
 .movies .movieOptions button {
-    margin: 2% 2%;
+    margin: 2% 0;
 }
 
  .tickets {
@@ -86,7 +90,12 @@ main h2 {
 }
 
 .purchaseInfo button {width: 60%; margin: 2% auto;}
-#checkoutResults {text-align: center; grid-column: 1/span 2;}
+#checkoutResults {text-align: left; grid-column: 1/span 2;}
+
+#checkoutTicket {margin: 0 auto;}
+#checkoutTicket img {width: 100%;}
+
+#results div {margin: 0 auto;}
 
 
 /* BUTTONS */
@@ -121,8 +130,6 @@ button {
     grid-column-gap: 2%;
 }
 
-.removeTickets button {width: 50%;}
-
 
 
 .movieTime #time {
@@ -133,7 +140,7 @@ button {
 .movieTime input{width: 1rem; display: inline; height: 20px;}
 
 .movieTime .buttonContainer {text-align: center; margin: 0 auto; padding: 2% 0;}
-.buttonContainer button {width: 50%;}
+.buttonContainer button {width: 60%;}
 
 #timeFeedback {
     color: #000; 
@@ -184,7 +191,8 @@ button {
 
 
 span {
-    font-weight: 400;
+    font-weight: 500;
+    color: #008dce;
 }
 
 
@@ -206,6 +214,8 @@ span {
 input, textarea {display: block; width: 90%; height: 50px;}
 
 .checkout button {grid-column: 1/span 2;}
+
+#results {grid-column: 1/span 2; display: grid; grid-template-columns: 1fr 1fr; padding: 2% 0;}
 
 /*---- FOOTER ----*/
 footer {
@@ -316,4 +326,6 @@ and (min-width: 501px) {
 
 
 .checkout button {width: 80%;}
+#results {display: block; padding: 2% 0;}
+
 }

@@ -34,8 +34,8 @@
                     </div>
 
                     <div class="movieTime">
-                            <h2>Movie Time Options</h2>
-                            <div id="time">
+                        <h2>Movie Time Options</h2>
+                        <div id="time">
 
                             <section>
                                 <input type="radio" id="morning" name="time" value="morning" checked>
@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="buttonContainer">
-                                <button id="showTime">Choose Time</button>
+                            <button id="showTime">Select Time</button>
                         </div>
                     </div>
                 </div>
@@ -68,24 +68,24 @@
                     <div class="addTickets">
                         <h2>Add a Ticket</h2>
                         <div class="ticketOptionBTN">
-                        <button id="add_child">Child $5</button>
-                        <button id="add_adult">Adult $10</button>
-                        <button id="add_senior">Senior $7</button>
-                    </div>
+                            <button id="add_child">Child $5</button>
+                            <button id="add_adult">Adult $10</button>
+                            <button id="add_senior">Senior $7</button>
+                        </div>
                     </div>
                     <div class="removeTickets">
-                        <h2>Remove a Ticket</h2>
+                        <h2>Delete a Ticket</h2>
                         <div class="buttonContainer">
-                        <button id="remove_ticketLast">Remove the Last Ticket</button>
-                    </div>
+                            <button id="remove_ticketLast">Delete the Last Ticket</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
 
-                <div class="movieTickets">
-                     <h2>Your Movie and Ticket Selection</h2>
-                     <div class="movieTicketInfo">
+            <div class="movieTickets">
+                <h2>Your Movie and Ticket Selection</h2>
+                <div class="movieTicketInfo">
 
                     <div class="movieInfo">
                         <div class="movieImage">
@@ -116,20 +116,17 @@
                     <h2>Buy Ticket(s)</h2>
                     <div class="purchaseInfo">
                         <div>
-                            <h3>Please enter your first name</h3>
-                            <textarea id="fname"></textarea>
-
-                            <h3>Please enter your last name</h3>
-                            <textarea id="lname"></textarea>
+                            <h3>Please enter your first and last name</h3>
+                            <textarea id="name" placeholder="John Doe"></textarea>
 
                             <h3>Please enter your email address below</h3>
-                            <input type="email" id="myEmail" value="" placeholder="john@gmail.com">
+                            <input type="email" id="myEmail" value="" placeholder="johndoe@gmail.com">
                         </div>
 
                         <div>
                             <h3>Please enter your credit card information below</h3>
                             Credit Card Number:
-                            <input id="ccNumber" type="text" name="cc-number" maxlength="20">
+                            <input id="ccNumber" type="text" name="cc-number" maxlength="16">
                             Exiration Date:
                             Month:
                             <input id="month" type="text" name="cc-exp-month" maxlength="2" placeholder="00">
@@ -138,7 +135,17 @@
                         </div>
 
                         <button type="button" onClick="tellCheckout()">Purchase Ticket(s)</button>
-                        <p id="checkoutResults"></p>
+                        <div id="results">
+                            <div>
+                                <p id="checkoutTicket">
+
+                                </p>
+                            </div>
+                            <div>
+                                <p id="checkoutResults"></p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>

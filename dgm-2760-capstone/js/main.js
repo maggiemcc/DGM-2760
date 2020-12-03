@@ -41,42 +41,42 @@ function movieInfo(event) {
 
 
 
-// ADDING/REMOVING TICKETS
-const tickets = ['adult ticket']
+// ADDING/REMOVING TICKETS ARRAY
+const ticketsArray = ['adult ticket']
 const errorElement = document.querySelector('#error')
 const displayResults = document.querySelector('#displayResults')
 
 const listTickets = () => {
     let ticketList = ''
-    tickets.forEach(ticket => {
+    ticketsArray.forEach(ticket => {
         ticketList += `${ticket} <br>`
     })
-    displayResults.innerHTML = `${ticketList} <span>${tickets.length} tickets total</span>`
+    displayResults.innerHTML = `${ticketList} <span>${ticketsArray.length} tickets total</span>`
 }
 
 listTickets()
 
 // Add a child, adult, or senior ticket
 document.querySelector('#add_child').onclick = () => {
-    tickets.push('child ticket')
+    ticketsArray.push('+ child ticket')
     listTickets()
 }
 
 document.querySelector('#add_adult').onclick = () => {
-    tickets.push('adult ticket')
+    ticketsArray.push('+ adult ticket')
     listTickets()
 }
 
 document.querySelector('#add_senior').onclick = () => {
-    tickets.push('senior ticket')
+    ticketsArray.push('+ senior ticket')
     listTickets()
 }
 
 
 // Remove last ticket
 document.querySelector('#remove_ticketLast').onclick = () => {
-    if (tickets.length > 0) {
-        tickets.pop()
+    if (ticketsArray.length > 0) {
+        ticketsArray.pop()
         listTickets()
     } else {
         errorElement.textContent = 'There are no tickets to remove from list.'
@@ -90,10 +90,8 @@ let checkoutResult = document.querySelector('#checkoutResults')
 
 function tellCheckout() {
     // get names
-    let firstName = document.querySelector('#fname').value.toLowerCase().split(/\s*[,\n." "]+\s*/)
-    console.log(firstName)
-    let lastName = document.querySelector('#lname').value.toLowerCase().split(/\s*[,\n." "]+\s*/)
-    console.log(lastName)
+    let customerName = document.querySelector('#name').value.toUpperCase()
+    console.log(customerName)
 
     // get email
     var email = document.getElementById("myEmail").value;
@@ -106,8 +104,25 @@ function tellCheckout() {
     console.log(year)
 
 
+    let imagePath = 'images/ticket.png'
+    const ticketImage = document.createElement('img')
+    ticketImage.setAttribute('src', imagePath)
+    const movieTicket = document.querySelector('#checkoutTicket')
+
+
+    if (movieTicket.hasChildNodes(ticketImage)) {
+        let pass = movieTicket.childNodes;
+
+        for (let i = 0; i < pass.length && pass.length < 2; i++) {
+            movieTicket.appendChild(ticketImage);
+        }
+    }
+
+    let confirmation = Math.floor(Math.random() * 15000)
+
+
     // message containing first and last name, total tickets, and email.
-    const myCheckout = `<span>${firstName} ${lastName}</span>, thank you for your purchase of <span>${tickets.length}</span> movie ticket(s). We hope you will enjoy the show. Your purchase was charged to your card with an expiration date of: <span>${month}/${year}</span>. We have sent an email confirmation to: <span>${email}</span>.`
+    const myCheckout = `<span>${customerName}</span>,<br> Thank you for your purchase of <span>${ticketsArray.length}</span> movie ticket(s) for ${showTimes.time}. We hope you will enjoy the show. Your purchase was charged to your card with the expiration date of: <span>${month}/${year}</span>. An email confirmation has been sent to: <span>${email}</span>. Your confirmation number is: <span>${confirmation}</span>`
 
     checkoutResult.innerHTML = myCheckout
     console.log(myCheckout)
