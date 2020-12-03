@@ -1,0 +1,35 @@
+{
+    "movies": [
+        {
+            "name": "Thor",
+            "length": "1 hr 55 min",
+            "rated": "PG-13",
+            "genre": "Action, Adventure, Sci-Fi",
+            "picture": "images/thor2.jpg"
+        },
+
+        {   
+            "name": "Venom",
+            "length": "1 hr 52 min",
+            "rated": "PG-13",
+            "genre": "Action, Horror, Sci-Fi",
+            "picture": "images/venom.jpg"
+        },
+
+        {
+            "name": "Grease",
+            "length": "1 hr 50 min",
+            "rated": "PG",
+            "genre": "Musical, Romance",
+            "picture": "images/grease.jpg"
+        },
+
+        {   
+            "name": "Cinderella",
+            "length": "1 hr 45 min",
+            "rated": "PG",
+            "genre": "Drama, Family, Sci-Fi",
+            "picture": "images/cinderella.jpg"
+        }
+    ]
+}

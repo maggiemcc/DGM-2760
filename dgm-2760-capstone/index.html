@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Capstone: Movie Reel</title>
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="company"></h1>
+        <h2 id="slogan"></h2>
+    </header>
+
+    <main>
+        <!-- <h1 id="pageName"></h1> -->
+        <div class="movieContent">
+
+            <div class="userInput">
+
+                <div class="movieChoices">
+
+                    <div class="movies">
+                        <h2>Select a Movie</h2>
+                        <div class="movieOptions">
+                            <button id="thor">Thor</button>
+                            <button id="venom">Venom</button>
+                            <button id="grease">Grease</button>
+                            <button id="cinderella">Cinderella</button>
+                        </div>
+                    </div>
+
+                    <div class="movieTime">
+                            <h2>Movie Time Options</h2>
+                            <div id="time">
+
+                            <section>
+                                <input type="radio" id="morning" name="time" value="morning" checked>
+                                <label for="morning"></label>9:00 AM</label>
+                            </section>
+
+                            <section>
+                                <input type="radio" id="afternoon" name="time" value="afternoon">
+                                <label for="afternoon">1:30 PM</label>
+                            </section>
+
+                            <section>
+                                <input type="radio" id="evening" name="time" value="evening">
+                                <label for="evening">4:30 PM</label>
+                            </section>
+
+                            <section>
+                                <input type="radio" id="night" name="time" value="night">
+                                <label for="night">8:00 PM</label>
+                            </section>
+                        </div>
+
+                        <div class="buttonContainer">
+                                <button id="showTime">Choose Time</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tickets">
+                    <div class="addTickets">
+                        <h2>Add a Ticket</h2>
+                        <div class="ticketOptionBTN">
+                        <button id="add_child">Child $5</button>
+                        <button id="add_adult">Adult $10</button>
+                        <button id="add_senior">Senior $7</button>
+                    </div>
+                    </div>
+                    <div class="removeTickets">
+                        <h2>Remove a Ticket</h2>
+                        <div class="buttonContainer">
+                        <button id="remove_ticketLast">Remove the Last Ticket</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="userResults">
+                <h2>Your Movie and Ticket Selection</h2>
+
+                <div class="movieTicketInfo">
+                    <div class="movieInfo">
+                        <div class="movieImage">
+                            <img id="picture" />
+                        </div>
+
+                        <div class="movieData">
+                            <h2 id="movieName">Movie Name</h2>
+                            <h3>Runtime: <span id="length"></span></h3>
+                            <h3>Rated: <span id="rated"></span></h3>
+                            <h3>Genre: <span id="genre"></span></h3>
+                            <h3 id="timeFeedback"></h3>
+                        </div>
+                    </div>
+
+
+                    <div class="ticketData">
+                        <h2 id="movieName">Your Ticket(s)</h2>
+                        <div id="displayResults"></div>
+                        <div id="error"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="checkout">
+                    <h2>Buy Ticket(s)</h2>
+                    <div class="purchaseInfo">
+                        <div>
+                            <h3>Please enter your first name</h3>
+                            <textarea id="fname"></textarea>
+
+                            <h3>Please enter your last name</h3>
+                            <textarea id="lname"></textarea>
+
+                            <h3>Please enter your email address below</h3>
+                            <!-- <textarea id="email"></textarea> -->
+                            <input type="email" id="myEmail" value="" placeholder="john@gmail.com">
+                        </div>
+
+                        <div>
+                            <h3>Please enter your credit card information below</h3>
+                            Credit Card Number:
+                            <input id="ccNumber" type="text" name="cc-number" maxlength="20">
+                            Exiration Date:
+                            Month:
+                            <input id="month" type="text" name="cc-exp-month" maxlength="2" placeholder="00">
+                            Year:
+                            <input id="year" type="text" name="cc-exp-year" maxlength="4" placeholder="0000">
+                        </div>
+
+                        <button type="button" onClick="tellCheckout()">Purchase Ticket(s)</button>
+                        <p id="checkoutResults"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Assignment for DGM2760 by Maggie McCausland</p>
+    </footer>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
