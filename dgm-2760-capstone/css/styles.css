@@ -167,11 +167,12 @@ button {
     grid-column-gap: 2%;
 }
 
+.movieImage {padding: 1.3rem 6%; margin: auto auto;}
 #picture {
     margin: 0 auto;
     display: flex;
     border-radius: 3px;
-    height: 100%;
+    width: 100%;
 }
 
 .ticketData {grid-column: 3; text-align: center;}
