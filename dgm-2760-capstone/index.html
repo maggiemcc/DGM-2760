@@ -149,17 +149,15 @@
                                 <input type="text" id="name" name="flname" placeholder="John Doe">
                             </div>
                             <div>
-                                <h3>Please enter your email address below</h3>
+                                <h3>Please enter your email address</h3>
                                 <input type="email" id="myEmail" value="" placeholder="johndoe@gmail.com">
                             </div>
                         </div>
 
-                       
-                            <h3>Please enter your credit card information below:</h3>
                             <div class="cardInfo">
                             <div>
                                 <label>Card Number:</label>
-                                <input id="ccNumber" type="text" name="cc-number" maxlength="16">
+                                <input id="ccNumber" inputmode="numeric" name="cc-number" maxlength="19" placeholder="5555 5555 5555 5555">
                             </div>
                             <div>
     
@@ -167,13 +165,6 @@
                                     <div>
                                         <label>Expiration Date</label>
                                         <input type="month" id="expire" name="cardExpiry">
-                                        <!-- <input id="month" type="text" name="cc-exp-month" maxlength="2"
-                                            placeholder="00"> -->
-                                    </div>
-                                    <div>
-                                        <!-- <label>Expiry Year</label> -->
-                                        <!-- <input id="year" type="text" name="cc-exp-year" maxlength="4"
-                                            placeholder="0000"> -->
                                     </div>
                                 </div>
                             </div>
@@ -182,6 +173,7 @@
                         <button type="button" onClick="tellCheckout()">Purchase Ticket(s)</button>
                         <div id="results">
                             <div>
+                                <h2 id="complete"></h2>
                                 <p id="checkoutTicket">
 
                                 </p>

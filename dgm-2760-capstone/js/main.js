@@ -166,6 +166,7 @@ function tellCheckout() {
     const ticketImage = document.createElement('img')
     ticketImage.setAttribute('src', imagePath)
     const movieTicket = document.querySelector('#checkoutTicket')
+    
 
 
     if (movieTicket.hasChildNodes(ticketImage)) {
@@ -173,6 +174,8 @@ function tellCheckout() {
 
         for (let i = 0; i < pass.length && pass.length < 2; i++) {
             movieTicket.appendChild(ticketImage);
+
+            document.querySelector('#complete').textContent = "Order Complete!"
         }
     }
 
@@ -184,7 +187,7 @@ function tellCheckout() {
 
     checkoutResult.innerHTML = myCheckout
 
-    // Refresh page after 20 seconds
+    Refresh page after 20 seconds
     window.setTimeout(function () {
         window.location.reload();
       }, 20000);

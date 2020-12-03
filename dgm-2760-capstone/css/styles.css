@@ -42,9 +42,9 @@ header h1 {font-size: 2.5rem;}
 header h2 {font-size: 1.8rem;}
 
 /*---- MAIN ----*/
-main {
+/* main {
   padding-bottom: 2.5rem;
-}
+} */
 
 main h1 {
   padding: 1rem 2%;
@@ -144,7 +144,7 @@ span {font-weight: 500; color: #008dce;}
     margin: 0 auto;
     display: flex;
     border-radius: 3px;
-    max-height: 350px;
+    max-height: 250px;
   }
 
   .movieData h2, .movieData h3 {text-align: left; padding: 0;}
@@ -196,12 +196,12 @@ span {font-weight: 500; color: #008dce;}
 /* USER RESULTS/CHECKOUT SECTION */
 .userResults {
   grid-row: 2;
-  border: 10px solid rgb(150, 0, 0);
   padding: 2% 2%;
-  border-style: double;
+  margin: 0 auto;
+  background-color: rgb(216, 216, 216);
 }
 
-.checkout {margin: 0 auto; text-align: center;}
+.checkout {margin: 0 auto; text-align: center; width: 80%;}
 
 
 .userContact, .cardInfo {
@@ -235,10 +235,10 @@ span {font-weight: 500; color: #008dce;}
 
 
 .checkout button {
-    margin: 2% auto;
+    margin: 1rem auto;
     width: 50%;
     padding: 0.5rem 2%;
-    background-color: #000;
+    background-color: rgb(5, 160, 0);
     text-align: center;
     border-radius: 10px;
     color: #fff;
@@ -249,30 +249,27 @@ span {font-weight: 500; color: #008dce;}
   }
 
 
+
+  /* TICKET CONFIRMATION RESULTS */
+
 #results {
-  grid-column: 1 / span 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 2%;
-  padding: 2% 0;
-}
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35% auto;
+    grid-column-gap: 4%;
+    border: 2px solid #000;
+    background-color: #fff;
+  }
 
+#results div {margin: auto; padding: 2% 2%;}
+  
+  
 
-#checkoutResults {
-  text-align: left;
-  grid-column: 1 / span 2;
-}
+#checkoutResults {text-align: left;}
 
-#checkoutTicket {
-  margin: 0 auto;
-}
-#checkoutTicket img {
-  width: 100%;
-}
+#checkoutTicket {margin: 0 auto;}
+#checkoutTicket img {width: 100%;}
 
-#results div {
-  margin: 0 auto;
-}
 
 /*---- FOOTER ----*/
 footer {
@@ -282,179 +279,95 @@ footer {
   padding: 0.7rem 0;
 }
 
+
+
+
 @media only screen and (max-width: 769px) and (min-width: 501px) {
 
-    .userInput {
-        text-align: left;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 2% 2%;
-        grid-column-gap: 2%;
-        background-color: pink;
-      }
-
-      .ticketOptionBTN button,
-      .buttonContainer button,
-      .movieOptions button {
-        margin: 2% 0;
-        width: 100%;
-        padding: 0.5rem 2%;
-        background-color: #000;
-        text-align: center;
-        border-radius: 10px;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 500;
-        border: none;
-        cursor: pointer;
-      }
-  /* .movieOptions {
-    grid-template-columns: 1fr 1fr;
+/* Movie, Time, Ticket Selection */
+.userInput {
+    padding: 2% 2%;
+    grid-column-gap: 4%;
   }
-
-  .tickets,
-  .movieChoices {
-    grid-template-columns: 1fr;
-  }
-  .removeTickets button,
-  .buttonContainer button {
+  
+  
+  /* BUTTONS: Movie, Time, Ticket Selection */
+  .ticketOptionBTN button,
+  .buttonContainer button,
+  .movieOptions button {
     width: 100%;
-    background-color: red;
+    padding: 0.5rem 2%;
   }
-
-  .ticketOptionBTN {
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2%;
-    grid-row-gap: 0.5rem;
-  }
-
-  .userResults {
-    border: 10px solid rgb(150, 0, 0);
-    border-style: double;
-  }
-
-  .movieTicketInfo {
-    display: block;
-    border: none;
-    background-color: pink;
-  }
-
+  
+  
+  /* DISPLAY USER SELECTION INFO/ Your Movie Ticket(s) */  
+  .movieTicketInfo {display: block;}
+  
   .movieInfo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2%;
-  }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2%;
+    }
+    
+  .movieImage {margin: auto auto;}
+    #picture {max-height: 200px;}
+  
 
-  #picture {
-    margin: 0 auto;
-    display: flex;
-    border-radius: 3px;
-    width: auto;
-    max-height: 400px;
-  }
+  
+  /* USER RESULTS/CHECKOUT SECTION */
+  .checkout {width: 95%;}
+  
+  .purchaseInfo input {width: 75%;}
 
-  .movieData h2 {
-    text-align: center;
-    padding: 0;
-  }
-
-  .purchaseInfo {
-    display: block;
-    grid-column-gap: 2%;
-    text-align: left;
-  }
-
-  .checkout button {
-    width: 80%;
-  } */
+  .checkout button {margin: 1.5rem auto; width: 60%;}
+  
 }
+
+
 
 @media (max-width: 500px) {
     .userInput {
         text-align: left;
-        display: grid;
-        grid-template-columns: 1fr;
+        display: block;
         padding: 2% 2%;
-        grid-column-gap: 2%;
-        background-color: rgba(231, 90, 231, 0.445);
       }
+    .movies, .movieTime, .tickets {margin: 2% 0;}
+
+    .movieTime #time input[type=radio] {height: 20px; width: 20px;}
+    .movieTime #time label {font-size: 1.3rem;}
+
     
       .ticketOptionBTN button,
       .buttonContainer button,
-      .movieOptions button {
-        margin: 2% 0;
-        width: 80%;
-        padding: 0.5rem 2%;
-        background-color: #000;
-        text-align: center;
-        border-radius: 10px;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 500;
-        border: none;
-        cursor: pointer;
-      }
+      .movieOptions button {width: 80%;}
 
 
-  /* .movieOptions {
-    grid-template-columns: 1fr 1fr;
-  }
 
-  .tickets,
-  .movieChoices {
-    grid-template-columns: 1fr;
-  }
-  .removeTickets button,
-  .buttonContainer button {
-    width: 80%;
-  }
+/* DISPLAY USER SELECTION INFO/ Your Movie Ticket(s) */  
+  .movieTicketInfo {display: block;}
+  
+  .movieInfo {display: block;}
 
-  .ticketOptionBTN {
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2%;
-    grid-row-gap: 0.5rem;
-  }
+  .movieInfo h2 {text-align: center;}
+    
+  .movieImage {margin: auto auto;}
+  #picture {max-height: 200px;}
+  
 
-  .userResults {
-    border: 10px solid rgb(150, 0, 0);
-    border-style: double;
-  }
+  
+  /* USER RESULTS/CHECKOUT SECTION */
+  .userResults {padding: 2% 2%;}
+  .checkout {width: 100%; display: block;}
+  
+  .purchaseInfo input {display: block; width: 100%;}
 
-  .movieTicketInfo {
+
+  .userContact, .cardInfo {
     display: block;
-    border: none;
-  }
-
-  .movieInfo {
-    grid-column: 1 / span 2;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 2%;
-  }
-
-  #picture {
-    margin: 0 auto;
-    display: flex;
-    border-radius: 3px;
-    /* max-height: 250px; */
-  /* } */
-
-  /* .movieData h2 {
-    text-align: center;
-    padding: 0;
-  } */
-
-  .purchaseInfo {
-    display: block;
-    grid-column-gap: 2%;
     text-align: left;
-  }
+    width: 90%;
+    margin: 0 auto;
+}
 
-  /* .checkout button {
-    width: 80%;
-  } */
-  #results {
-    display: block;
-    padding: 2% 0;
-  } 
+.checkout button {margin: 1.5rem auto; width: 85%;}
 }
