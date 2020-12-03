@@ -21,7 +21,7 @@
 
             <div class="userInput">
 
-                <div class="movieChoices">
+                <!-- <div class="movieChoices"> -->
 
                     <div class="movies">
                         <h2>Select a Movie</h2>
@@ -62,20 +62,15 @@
                             <button id="showTime">Select Time</button>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
 
                 <div class="tickets">
                     <div class="addTickets">
-                        <h2>Add a Ticket</h2>
+                        <h2>Choose Ticket(s)</h2>
                         <div class="ticketOptionBTN">
                             <button id="add_child">Child $5</button>
                             <button id="add_adult">Adult $10</button>
                             <button id="add_senior">Senior $7</button>
-                        </div>
-                    </div>
-                    <div class="removeTickets">
-                        <h2>Delete a Ticket</h2>
-                        <div class="buttonContainer">
                             <button id="remove_ticketLast">Delete the Last Ticket</button>
                         </div>
                     </div>
@@ -83,7 +78,7 @@
             </div>
 
 
-            <div class="movieTickets">
+            <div class="movieTicketSelection">
                 <h2>Your Movie and Ticket Selection</h2>
                 <div class="movieTicketInfo">
 
@@ -107,6 +102,35 @@
                         <div id="displayResults"></div>
                         <div id="error"></div>
                     </div>
+
+
+                    <div class="movieSeats">
+                        <h2>Please choose a seat to book</h2>
+                        <form id="seats" action="action_page.php" method="post">
+                            <div class="screen"><h1>SCREEN</h1></div>
+                            <label for="A1"><input type="checkbox" name="vehicle-a1" id="A1">A1</label>
+                            <label for="A2"><input type="checkbox" name="vehicle-a2" id="A2">A2</label>
+                            <label for="A3"><input type="checkbox" name="vehicle-a3" id="A3">A3</label>
+                            <label for="A4"><input type="checkbox" name="vehicle-a4" id="A4">A4</label>
+                            <label for="A5"><input type="checkbox" name="vehicle-a5" id="A5"> A5</label>
+                            <label for="A6"><input type="checkbox" name="vehicle-a6" id="A6"> A6</label>
+                            <label for="B1"><input type="checkbox" name="vehicle-b1" id="B1"> B1</label>
+                            <label for="B2"><input type="checkbox" name="vehicle-b2" id="B2"> B2</label>
+                            <label for="B3"><input type="checkbox" name="vehicle-b3" id="B3"> B3</label>
+                            <label for="B4"><input type="checkbox" name="vehicle-b4" id="B4"> B4</label>
+                            <label for="B5"><input type="checkbox" name="vehicle-b5" id="B5"> B5</label>
+                            <label for="B6"><input type="checkbox" name="vehicle-b6" id="B6"> B6</label>
+                            <label for="C1"><input type="checkbox" name="vehicle-c1" id="C1"> C1</label>
+                            <label for="C2"><input type="checkbox" name="vehicle-c2" id="C2"> C2</label>
+                            <label for="C3"><input type="checkbox" name="vehicle-c3" id="C3"> C3</label>
+                            <label for="C4"><input type="checkbox" name="vehicle-c4" id="C4"> C4</label>
+                            <label for="C5"><input type="checkbox" name="vehicle-c5" id="C5"> C5</label>
+                            <label for="C6"><input type="checkbox" name="vehicle-c6" id="C6"> C6</label>
+                      
+                          <input type="hidden" name="total" id="hidden-total" value="0">
+                          <input type="hidden" name="seats" id="hidden-seats" value="0">
+                        </form>
+                      </div>
                 </div>
             </div>
 
@@ -117,7 +141,7 @@
                     <div class="purchaseInfo">
                         <div>
                             <h3>Please enter your first and last name</h3>
-                            <textarea id="name" placeholder="John Doe"></textarea>
+                            <input type="text" id="name" name="flname" placeholder="John Doe">
 
                             <h3>Please enter your email address below</h3>
                             <input type="email" id="myEmail" value="" placeholder="johndoe@gmail.com">
@@ -127,10 +151,10 @@
                             <h3>Please enter your credit card information below</h3>
                             Credit Card Number:
                             <input id="ccNumber" type="text" name="cc-number" maxlength="16">
-                            Exiration Date:
-                            Month:
+                            <h3>Exiration Date</h3>
+                            <label>Month</label>
                             <input id="month" type="text" name="cc-exp-month" maxlength="2" placeholder="00">
-                            Year:
+                            <label>Year</label>
                             <input id="year" type="text" name="cc-exp-year" maxlength="4" placeholder="0000">
                         </div>
 
@@ -149,7 +173,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
     </main>

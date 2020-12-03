@@ -1,5 +1,5 @@
 // Display Company Name & Sloagen, Main H1
-document.querySelector('#company').innerText = "Movie Reel";
+document.querySelector('#company').innerText = "Movie Reels";
 document.querySelector('header > h2').innerText = "Choose Your Entertainment";
 
 // MOVIE API
@@ -42,7 +42,7 @@ function movieInfo(event) {
 
 
 // ADDING/REMOVING TICKETS ARRAY
-const ticketsArray = ['adult ticket']
+const ticketsArray = [ ]
 const errorElement = document.querySelector('#error')
 const displayResults = document.querySelector('#displayResults')
 
@@ -122,7 +122,7 @@ function tellCheckout() {
 
 
     // message containing first and last name, total tickets, and email.
-    const myCheckout = `<span>${customerName}</span>,<br> Thank you for your purchase of <span>${ticketsArray.length}</span> movie ticket(s) for ${showTimes.time}. We hope you will enjoy the show. Your purchase was charged to your card with the expiration date of: <span>${month}/${year}</span>. An email confirmation has been sent to: <span>${email}</span>. Your confirmation number: <span>${confirmation}</span>`
+    const myCheckout = `<span>${customerName}</span>,<br> Thank you for your purchase of <span>${ticketsArray.length}</span> movie ticket(s) for <span>${showTimes.time}</span>. We hope you will enjoy the show. Your purchase was charged to your card with the expiration date of: <span>${month}/${year}</span>. <br> An email confirmation has been sent to: <span>${email}</span>. <br> Confirmation number: <span>${confirmation}</span>`
 
     checkoutResult.innerHTML = myCheckout
     console.log(myCheckout)
@@ -155,3 +155,38 @@ document.querySelector('#night').addEventListener('click', () => showTimes.time 
 
 
 document.querySelector('#showTime').addEventListener('click', showTimes.timeOption)
+
+
+
+// SEAT SELECTION
+document.addEventListener("DOMContentLoaded", function() {
+
+    const seatSelections = {};
+    const inputSeats = document.querySelectorAll('input[type=checkbox]');
+
+    for (let i = 0; i < inputSeats.length; i++) {
+        inputSeats[i].addEventListener("click", displaySeatCheck);
+    }
+
+    function displaySeatCheck(event) {
+        if (event.target.checked) {
+
+            // prevent from selecting more seats than tickets
+            if (Object.keys(seatSelections).length >= ticketsArray.length) {
+                alert(`You can only reserve ${ticketsArray.length} seat(s).`);
+                event.preventDefault();
+                return;
+            } 
+
+            else {
+                seatSelections[event.target.id] = {
+                    id: event.target.id
+                };
+            }
+        } 
+        else {
+            // delete previous seat selection
+            delete seatSelections[event.target.id];
+        }
+    }
+});

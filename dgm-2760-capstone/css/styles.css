@@ -60,34 +60,74 @@ main h2 {
     margin-bottom: 2%;
 }
 
-
+/* Movie, Time, Ticket Selection */
 .userInput {
     text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2% 2%;
+    grid-column-gap: 2%;
 }
 
-.movieChoices {
+.userInput h2 {padding: 0;}
+
+/* .movieChoices {
     padding: 2% 2%;
-}
+} */
 .movies {
     text-align: center;
 }
 
+/* SELECT MOVIE */
 .movies .movieOptions {
-    margin: 2% 2%;
+    /* margin: 2% 2%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2%;
+    grid-column-gap: 2%; */
+    display: block;
+    width: 100%;
 }
 
-.movies .movieOptions button {
-    margin: 2% 0;
-}
+/* SELECT TIME */
+.movieTime #time {text-align: center;}
+.movieTime input{width: 1rem; display: inline; height: 20px;}
 
+.movieTime .buttonContainer {text-align: center; margin: 0 auto; padding: 2% 0;}
+
+
+/* ADD/DELETE TICKET */
  .tickets {
     margin: 0 auto;
-    padding: 2% 2%;
     text-align: center;
 }
+
+.tickets .ticketOptionBTN {
+    display: block;
+    width: 100%;
+}
+
+
+/* BUTTONS Movie, Time, Ticket Selection */
+.ticketOptionBTN button, .buttonContainer button, .movieOptions button {
+    margin: 2% 0;
+    width: 65%;
+    padding: .5rem 2%;
+    background-color: #000;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+#remove_ticketLast {background-color: rgb(150, 0, 0);}
+
+
+
+
+
 
 .purchaseInfo button {width: 60%; margin: 2% auto;}
 #checkoutResults {text-align: left; grid-column: 1/span 2;}
@@ -98,49 +138,10 @@ main h2 {
 #results div {margin: 0 auto;}
 
 
-/* BUTTONS */
-
-
-button {
-    padding: 1.3rem 2%;
-    background-color: #000;
-    text-align: center;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-}
-
-
-.tickets, .movieChoices {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.addTickets, .removeTickets {
-    padding: 2% 0;
-}
-
-
-.ticketOptionBTN {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 2%;
-}
 
 
 
-.movieTime #time {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-}
-.movieTime input{width: 1rem; display: inline; height: 20px;}
 
-.movieTime .buttonContainer {text-align: center; margin: 0 auto; padding: 2% 0;}
-.buttonContainer button {width: 60%;}
 
 #timeFeedback {
     color: #000; 
@@ -156,18 +157,21 @@ button {
     margin: 0 2%;
 }
 
-.movieTickets {
+.movieTicketSelection {
     border: 3px solid black;
-    padding: 2% 2%;
+    /* padding: 2% 2%; */
     margin: 2% 2%;
 }
 
+.movieTicketSelection h2 {padding: 2% 2%;}
 .movieTicketInfo {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 2% 2%;
 }
 
+
+#displayResults span {color: #000;}
 .movieInfo {
     grid-column: 1/span 2;
     display: grid;
@@ -211,7 +215,7 @@ span {
 
 .purchaseInfo h3 {padding: 0;}
 
-input, textarea {display: block; width: 90%; height: 50px;}
+input {display: block; width: 90%; height: 50px;}
 
 .checkout button {grid-column: 1/span 2;}
 
@@ -275,6 +279,15 @@ and (min-width: 501px) {
 
 
 .checkout button {width: 80%;}
+
+.userInput {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2% 2%;
+    grid-column-gap: 2%;
+    background-color: pink;
+}
 }
 
 
@@ -312,7 +325,7 @@ and (min-width: 501px) {
         margin: 0 auto;
         display: flex;
         border-radius: 3px;
-/*         max-height: 250px; */
+        /* max-height: 250px; */
     }
 
 
@@ -328,4 +341,38 @@ and (min-width: 501px) {
 .checkout button {width: 80%;}
 #results {display: block; padding: 2% 0;}
 
+.userInput {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2% 2%;
+    grid-column-gap: 2%;
+    background-color: rgba(231, 90, 231, 0.445);
 }
+
+.ticketOptionBTN button, .buttonContainer button, .movieOptions button {
+    margin: 2% 0;
+    width: 80%;
+    padding: .5rem 2%;
+    background-color: #000;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+}
+.movieSeats {grid-column: 1/span 3; padding: 0;}
+.screen {grid-column: 1/span 6; background-color: #000;}
+.screen h1 {color: #fff; text-align: center; padding: 2% 2%;}
+#seats {
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    border: 1px solid #000;
+    text-align: center;
+    padding: 2% 2%;
+}
+.movieSeats input {width: 1rem; margin: 0 auto;}
