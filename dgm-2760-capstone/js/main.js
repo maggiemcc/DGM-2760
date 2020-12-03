@@ -187,7 +187,7 @@ function tellCheckout() {
 
     checkoutResult.innerHTML = myCheckout
 
-    Refresh page after 20 seconds
+    // Refresh page after 20 seconds
     window.setTimeout(function () {
         window.location.reload();
       }, 20000);
