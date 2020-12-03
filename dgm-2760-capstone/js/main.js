@@ -79,54 +79,10 @@ document.querySelector('#remove_ticketLast').onclick = () => {
         ticketsArray.pop()
         listTickets()
     } else {
-        errorElement.textContent = 'There are no tickets to remove from list.'
+        errorElement.textContent = 'There are no tickets to remove.'
     }
 }
 
-
-
-// CHECKOUT
-let checkoutResult = document.querySelector('#checkoutResults')
-
-function tellCheckout() {
-    // get names
-    let customerName = document.querySelector('#name').value.toUpperCase()
-    console.log(customerName)
-
-    // get email
-    var email = document.getElementById("myEmail").value;
-    console.log(email)
-
-    // get Credit Card Info
-    var month = document.getElementById("month").value;
-    console.log(month)
-    var year = document.getElementById("year").value;
-    console.log(year)
-
-
-    let imagePath = 'images/ticket.png'
-    const ticketImage = document.createElement('img')
-    ticketImage.setAttribute('src', imagePath)
-    const movieTicket = document.querySelector('#checkoutTicket')
-
-
-    if (movieTicket.hasChildNodes(ticketImage)) {
-        let pass = movieTicket.childNodes;
-
-        for (let i = 0; i < pass.length && pass.length < 2; i++) {
-            movieTicket.appendChild(ticketImage);
-        }
-    }
-
-    let confirmation = Math.floor(Math.random() * 15000)
-
-
-    // message containing first and last name, total tickets, and email.
-    const myCheckout = `<span>${customerName}</span>,<br> Thank you for your purchase of <span>${ticketsArray.length}</span> movie ticket(s) for <span>${showTimes.time}</span>. We hope you will enjoy the show. Your purchase was charged to your card with the expiration date of: <span>${month}/${year}</span>. <br> An email confirmation has been sent to: <span>${email}</span>. <br> Confirmation number: <span>${confirmation}</span>`
-
-    checkoutResult.innerHTML = myCheckout
-    console.log(myCheckout)
-}
 
 // display checkout message once clicked
 document.querySelector('#checkoutResults').onClick = tellCheckout
@@ -178,11 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             } 
 
-            else {
-                seatSelections[event.target.id] = {
-                    id: event.target.id
-                };
-            }
+            else {seatSelections[event.target.id] = {id: event.target.id};}
         } 
         else {
             // delete previous seat selection
@@ -190,3 +142,52 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+
+// CHECKOUT
+let checkoutResult = document.querySelector('#checkoutResults')
+
+function tellCheckout() {
+    // get names
+    let customerName = document.querySelector('#name').value.toUpperCase()
+    console.log(customerName)
+
+    // get email
+    var email = document.getElementById("myEmail").value;
+    console.log(email)
+
+    // get Credit Card Info
+    var expire = document.getElementById("expire").value;
+    console.log(expire)
+
+
+
+    let imagePath = 'images/ticket.png'
+    const ticketImage = document.createElement('img')
+    ticketImage.setAttribute('src', imagePath)
+    const movieTicket = document.querySelector('#checkoutTicket')
+
+
+    if (movieTicket.hasChildNodes(ticketImage)) {
+        let pass = movieTicket.childNodes;
+
+        for (let i = 0; i < pass.length && pass.length < 2; i++) {
+            movieTicket.appendChild(ticketImage);
+        }
+    }
+
+    let confirmation = Math.floor(Math.random() * 15000)
+
+
+    // message containing first and last name, total tickets, and email.
+    const myCheckout = `<span>${customerName}</span>,<br> Thank you for your purchase of <span>${ticketsArray.length}</span> movie ticket(s) for <span>${showTimes.time}</span>. We hope you will enjoy the show. Your purchase was charged to your card with the expiration date of: <span>${expire}</span>. <br> An email confirmation has been sent to: <span>${email}</span>. <br> Confirmation number: <span>${confirmation}</span> <br> <i>This page will reload in 20 secs to place a new movie ticket purchase.</i>`
+
+    checkoutResult.innerHTML = myCheckout
+
+    // Refresh page after 20 seconds
+    window.setTimeout(function () {
+        window.location.reload();
+      }, 20000);
+
+    console.log(myCheckout)
+}

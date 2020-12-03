@@ -1,359 +1,243 @@
 /* GOOGLE FONT */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 /*---- BODY ----*/
-body {background-color: rgb(240, 240, 240); font-family: 'Roboto', sans-serif;}
+body {
+  background-color: rgb(240, 240, 240);
+  font-family: "Roboto", sans-serif;
+}
 
 main, header, footer {
-    max-width: 64rem;
-    max-width: 1024px;
-    padding-top: 1rem; 
-    margin: 0 auto;
-    background-color: white;
+  max-width: 64rem;
+  max-width: 1024px;
+  padding-top: 1rem;
+  margin: 0 auto;
+  background-color: white;
 }
 
 h1 {
-    font-size: 1.5rem; 
-    font-weight: 900; 
-    margin: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0;
 }
 
 h2 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
 }
-
 
 /*---- HEADER ----*/
 header {
-    background-image: url("../images/popcorn.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
-    color: #fff;
-    text-shadow: 2px 2px 3px rgb(0, 0, 0); 
+  background-image: url("../images/popcorn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  color: #fff;
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
 
 header h1, header h2 {padding-left: 2%;}
 header h1 {font-size: 2.5rem;}
 header h2 {font-size: 1.8rem;}
 
-header h2 {color: #fff;}
-
-
 /*---- MAIN ----*/
-main {padding-bottom: 2.5rem;}
-main h1, main h2, main h3, main p {padding: 0 1rem;}
+main {
+  padding-bottom: 2.5rem;
+}
 
 main h1 {
-    padding-bottom: .5rem;
-    color:#000;
-    text-align: left;
+  padding: 1rem 2%;
+  color: #000;
+  text-align: center;
 }
 
 main h2 {
-    color: #008dce; 
-    font-weight: 900;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2%;
+  color: #008dce;
+  font-weight: 900;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2%;
 }
+
+span {font-weight: 500; color: #008dce;}
+
+
 
 /* Movie, Time, Ticket Selection */
 .userInput {
-    text-align: left;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 2% 2%;
-    grid-column-gap: 2%;
-}
-
-.userInput h2 {padding: 0;}
-
-/* .movieChoices {
-    padding: 2% 2%;
-} */
-.movies {
-    text-align: center;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2%;
 }
 
 /* SELECT MOVIE */
-.movies .movieOptions {
-    /* margin: 2% 2%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2%; */
-    display: block;
-    width: 100%;
-}
+.movies {text-align: center;}
+
 
 /* SELECT TIME */
-.movieTime #time {text-align: center;}
-.movieTime input{width: 1rem; display: inline; height: 20px;}
+.movieTime {text-align: center;}
+.movieTime selection {display: block;}
 
-.movieTime .buttonContainer {text-align: center; margin: 0 auto; padding: 2% 0;}
+.movieTime .buttonContainer {
+  text-align: center;
+  margin: 0 auto;
+  padding: 2% 0;
+}
 
 
 /* ADD/DELETE TICKET */
- .tickets {
-    margin: 0 auto;
-    text-align: center;
+.tickets {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .tickets .ticketOptionBTN {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
-
-/* BUTTONS Movie, Time, Ticket Selection */
-.ticketOptionBTN button, .buttonContainer button, .movieOptions button {
-    margin: 2% 0;
-    width: 65%;
-    padding: .5rem 2%;
-    background-color: #000;
-    text-align: center;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
+/* BUTTONS: Movie, Time, Ticket Selection */
+.ticketOptionBTN button,
+.buttonContainer button,
+.movieOptions button {
+  margin: 2% 0;
+  width: 65%;
+  padding: 0.5rem 2%;
+  background-color: #000;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
 }
 
 #remove_ticketLast {background-color: rgb(150, 0, 0);}
 
 
 
-
-
-
-.purchaseInfo button {width: 60%; margin: 2% auto;}
-#checkoutResults {text-align: left; grid-column: 1/span 2;}
-
-#checkoutTicket {margin: 0 auto;}
-#checkoutTicket img {width: 100%;}
-
-#results div {margin: 0 auto;}
-
-
-
-
-
-
-
-#timeFeedback {
-    color: #000; 
-    font-size: 1rem;
-}
-
-
-.userResults {
-    grid-row: 2;
-    border: 10px solid rgb(150, 0, 0);
-    padding: 2% 2%;
-    border-style: double;
-    margin: 0 2%;
-}
-
+/* DISPLAY USER SELECTION INFO/ Your Movie Ticket(s) */
 .movieTicketSelection {
     border: 3px solid black;
-    /* padding: 2% 2%; */
-    margin: 2% 2%;
-}
+    margin: 2% 0;
+  }
 
-.movieTicketSelection h2 {padding: 2% 2%;}
 .movieTicketInfo {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 2% 2%;
+    padding: 0 2%;
 }
 
 
-#displayResults span {color: #000;}
 .movieInfo {
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2%;
 }
-
+  
 .movieImage {margin: auto auto;}
-#picture {
+  #picture {
     margin: 0 auto;
     display: flex;
     border-radius: 3px;
     max-height: 350px;
-}
+  }
 
+  .movieData h2, .movieData h3 {text-align: left; padding: 0;}
+  .movieData h3 {font-size: 1rem;}
+  .movieTicketSelection h2 {padding: 2% 2%;}
+  
+/* TIME/TICKET FEEDBACK */
 .ticketData {grid-column: 3; text-align: center;}
+#timeFeedback {color: #000; font-size: 1rem;}
+#displayResults span {color: #000;}
+#error {font-style: italic;}
 
-/* .movieData, .ticketData {padding: 1.3rem 2%;} */
-/* .movieData, .ticketData {padding: 1.3rem 2%;} */
-.movieData h2, .movieData h3 {text-align: left; padding: 0;}
 
 
-span {
-    font-weight: 500;
-    color: #008dce;
+/* SEAT SELECTION SECTION */
+.movieSeats {
+  grid-column: 1 / span 3;
+  padding: 0;
+}
+
+.screen {
+  grid-column: 1 / span 6;
+  background-color: #000;
+}
+
+.screen h1 {
+  color: #fff;
+  text-align: center;
+  padding: 2% 2%;
+}
+
+#seats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 1px solid #000;
+  text-align: center;
+  padding: 2% 2%;
+}
+
+.movieSeats input {
+  width: 1rem;
+  margin: 0 auto;
+  display: block;
+  height: 50px;
 }
 
 
 
-.checkout {
-    grid-column: 1/span 2; 
-    padding: 2% 0;
+/* USER RESULTS/CHECKOUT SECTION */
+.userResults {
+  grid-row: 2;
+  border: 10px solid rgb(150, 0, 0);
+  padding: 2% 2%;
+  border-style: double;
 }
 
-.purchaseInfo {
-    display: grid;
+.checkout {margin: 0 auto; text-align: center;}
+
+
+.userContact, .cardInfo {
+    display: grid; 
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2%;
     text-align: left;
 }
-
-.purchaseInfo h3 {padding: 0;}
-
-input {display: block; width: 90%; height: 50px;}
-
-.checkout button {grid-column: 1/span 2;}
-
-#results {grid-column: 1/span 2; display: grid; grid-template-columns: 1fr 1fr; padding: 2% 0;}
-
-/*---- FOOTER ----*/
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: .7rem 0;
-}
-
-
-@media only screen and (max-width: 769px) 
-and (min-width: 501px) {
-    .movieOptions {grid-template-columns: 1fr 1fr;}
-
-    .tickets, .movieChoices {grid-template-columns: 1fr;}
-    .removeTickets button, .buttonContainer button {width: 80%;}
-
-    .ticketOptionBTN {
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 2%;
-        grid-row-gap: .5rem;
-    }
-
-    .userResults {
-        border: 10px solid rgb(150, 0, 0);
-        border-style: double;
-    }
-
-    .movieTicketInfo {
-        display: block;
-        border: none;
-        /* background-color: pink; */
-    }
-
-    .movieInfo {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 2%;
-    }
-
-    #picture {
-        margin: 0 auto;
-        display: flex;
-        border-radius: 3px;
-        width: auto;
-        max-height: 400px;
-    }
-
-
-    .movieData h2 {text-align: center; padding: 0;}
-    
-    .purchaseInfo {
-        display: block;
-        grid-column-gap: 2%;
-        text-align: left;
-    }
-
-
-.checkout button {width: 80%;}
-
-.userInput {
+  
+.purchaseInfo h3 {
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
     text-align: left;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 2% 2%;
-    grid-column-gap: 2%;
-    background-color: pink;
-}
 }
 
-
-@media (max-width: 500px) {
-    .movieOptions {grid-template-columns: 1fr 1fr;}
-
-    .tickets, .movieChoices {grid-template-columns: 1fr;}
-    .removeTickets button, .buttonContainer button {width: 80%;}
-
-    .ticketOptionBTN {
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 2%;
-        grid-row-gap: .5rem;
-    }
-
-    .userResults {
-        border: 10px solid rgb(150, 0, 0);
-        border-style: double;
-    }
-
-    .movieTicketInfo {
-        display: block;
-        border: none;
-    }
-
-    .movieInfo {
-        grid-column: 1/span 2;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-column-gap: 2%;
-
-    }
-
-    #picture {
-        margin: 0 auto;
-        display: flex;
-        border-radius: 3px;
-        /* max-height: 250px; */
-    }
-
-
-    .movieData h2 {text-align: center; padding: 0;}
-    
-    .purchaseInfo {
-        display: block;
-        grid-column-gap: 2%;
-        text-align: left;
-    }
-
-
-.checkout button {width: 80%;}
-#results {display: block; padding: 2% 0;}
-
-.userInput {
-    text-align: left;
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 2% 2%;
-    grid-column-gap: 2%;
-    background-color: rgba(231, 90, 231, 0.445);
+.purchaseInfo input {
+    margin: .5rem 0; 
+    padding: 2% 2%; 
+    color: #000; 
+    display: block; 
+    width: 65%; 
+    background-color: rgb(245, 245, 245); 
+    border-radius: 7px;
+}
+.purchaseInfo input::placeholder {
+    padding: 2% 2%; 
+    color:rgb(122, 122, 122);
 }
 
-.ticketOptionBTN button, .buttonContainer button, .movieOptions button {
-    margin: 2% 0;
-    width: 80%;
-    padding: .5rem 2%;
+
+
+.checkout button {
+    margin: 2% auto;
+    width: 50%;
+    padding: 0.5rem 2%;
     background-color: #000;
     text-align: center;
     border-radius: 10px;
@@ -362,17 +246,215 @@ and (min-width: 501px) {
     font-weight: 500;
     border: none;
     cursor: pointer;
+  }
+
+
+#results {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2%;
+  padding: 2% 0;
 }
 
+
+#checkoutResults {
+  text-align: left;
+  grid-column: 1 / span 2;
 }
-.movieSeats {grid-column: 1/span 3; padding: 0;}
-.screen {grid-column: 1/span 6; background-color: #000;}
-.screen h1 {color: #fff; text-align: center; padding: 2% 2%;}
-#seats {
-    display: grid; 
-    grid-template-columns: repeat(6, 1fr); 
-    border: 1px solid #000;
+
+#checkoutTicket {
+  margin: 0 auto;
+}
+#checkoutTicket img {
+  width: 100%;
+}
+
+#results div {
+  margin: 0 auto;
+}
+
+/*---- FOOTER ----*/
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 0.7rem 0;
+}
+
+@media only screen and (max-width: 769px) and (min-width: 501px) {
+
+    .userInput {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2% 2%;
+        grid-column-gap: 2%;
+        background-color: pink;
+      }
+
+      .ticketOptionBTN button,
+      .buttonContainer button,
+      .movieOptions button {
+        margin: 2% 0;
+        width: 100%;
+        padding: 0.5rem 2%;
+        background-color: #000;
+        text-align: center;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+      }
+  /* .movieOptions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tickets,
+  .movieChoices {
+    grid-template-columns: 1fr;
+  }
+  .removeTickets button,
+  .buttonContainer button {
+    width: 100%;
+    background-color: red;
+  }
+
+  .ticketOptionBTN {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 0.5rem;
+  }
+
+  .userResults {
+    border: 10px solid rgb(150, 0, 0);
+    border-style: double;
+  }
+
+  .movieTicketInfo {
+    display: block;
+    border: none;
+    background-color: pink;
+  }
+
+  .movieInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2%;
+  }
+
+  #picture {
+    margin: 0 auto;
+    display: flex;
+    border-radius: 3px;
+    width: auto;
+    max-height: 400px;
+  }
+
+  .movieData h2 {
     text-align: center;
-    padding: 2% 2%;
+    padding: 0;
+  }
+
+  .purchaseInfo {
+    display: block;
+    grid-column-gap: 2%;
+    text-align: left;
+  }
+
+  .checkout button {
+    width: 80%;
+  } */
 }
-.movieSeats input {width: 1rem; margin: 0 auto;}
+
+@media (max-width: 500px) {
+    .userInput {
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 2% 2%;
+        grid-column-gap: 2%;
+        background-color: rgba(231, 90, 231, 0.445);
+      }
+    
+      .ticketOptionBTN button,
+      .buttonContainer button,
+      .movieOptions button {
+        margin: 2% 0;
+        width: 80%;
+        padding: 0.5rem 2%;
+        background-color: #000;
+        text-align: center;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+      }
+
+
+  /* .movieOptions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tickets,
+  .movieChoices {
+    grid-template-columns: 1fr;
+  }
+  .removeTickets button,
+  .buttonContainer button {
+    width: 80%;
+  }
+
+  .ticketOptionBTN {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2%;
+    grid-row-gap: 0.5rem;
+  }
+
+  .userResults {
+    border: 10px solid rgb(150, 0, 0);
+    border-style: double;
+  }
+
+  .movieTicketInfo {
+    display: block;
+    border: none;
+  }
+
+  .movieInfo {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2%;
+  }
+
+  #picture {
+    margin: 0 auto;
+    display: flex;
+    border-radius: 3px;
+    /* max-height: 250px; */
+  /* } */
+
+  /* .movieData h2 {
+    text-align: center;
+    padding: 0;
+  } */
+
+  .purchaseInfo {
+    display: block;
+    grid-column-gap: 2%;
+    text-align: left;
+  }
+
+  /* .checkout button {
+    width: 80%;
+  } */
+  #results {
+    display: block;
+    padding: 2% 0;
+  } 
+}

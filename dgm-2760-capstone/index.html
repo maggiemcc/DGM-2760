@@ -18,50 +18,52 @@
     <main>
         <!-- <h1 id="pageName"></h1> -->
         <div class="movieContent">
+            <h1>Choose Your Movie and Ticket(s)</h1>
 
             <div class="userInput">
-
                 <!-- <div class="movieChoices"> -->
 
-                    <div class="movies">
-                        <h2>Select a Movie</h2>
-                        <div class="movieOptions">
-                            <button id="thor">Thor</button>
-                            <button id="venom">Venom</button>
-                            <button id="grease">Grease</button>
-                            <button id="cinderella">Cinderella</button>
-                        </div>
+                <div class="movies">
+                    <h2>Select a Movie</h2>
+                    <div class="movieOptions">
+                        <button id="thor">Thor</button>
+                        <button id="venom">Venom</button>
+                        <button id="grease">Grease</button>
+                        <button id="cinderella">Cinderella</button>
+                    </div>
+                </div>
+
+                <div class="movieTime">
+                    <h2>Movie Time Options</h2>
+                    <div id="time">
+                        <selection>
+                             <input type="radio" id="morning" name="time" value="morning" checked>
+                            <label for="morning"> 9:00 AM</label>
+                        </selection>
+                        <selection>
+
+                            <input type="radio" id="afternoon" name="time" value="afternoon">
+                            <label for="afternoon"> 1:30 PM</label>
+                        </selection>
+
+                            <selection>
+
+                            <input type="radio" id="evening" name="time" value="evening">
+                            <label for="evening"> 4:30 PM</label>
+                        </selection>
+
+                            <selection>
+
+                            <input type="radio" id="night" name="time" value="night">
+                            <label for="night">8:00 PM</label>
+                        </selection>
+
                     </div>
 
-                    <div class="movieTime">
-                        <h2>Movie Time Options</h2>
-                        <div id="time">
-
-                            <section>
-                                <input type="radio" id="morning" name="time" value="morning" checked>
-                                <label for="morning"></label>9:00 AM</label>
-                            </section>
-
-                            <section>
-                                <input type="radio" id="afternoon" name="time" value="afternoon">
-                                <label for="afternoon">1:30 PM</label>
-                            </section>
-
-                            <section>
-                                <input type="radio" id="evening" name="time" value="evening">
-                                <label for="evening">4:30 PM</label>
-                            </section>
-
-                            <section>
-                                <input type="radio" id="night" name="time" value="night">
-                                <label for="night">8:00 PM</label>
-                            </section>
-                        </div>
-
-                        <div class="buttonContainer">
-                            <button id="showTime">Select Time</button>
-                        </div>
+                    <div class="buttonContainer">
+                        <button id="showTime">Select Time</button>
                     </div>
+                </div>
                 <!-- </div> -->
 
                 <div class="tickets">
@@ -71,7 +73,7 @@
                             <button id="add_child">Child $5</button>
                             <button id="add_adult">Adult $10</button>
                             <button id="add_senior">Senior $7</button>
-                            <button id="remove_ticketLast">Delete the Last Ticket</button>
+                            <button id="remove_ticketLast">Delete Last Ticket</button>
                         </div>
                     </div>
                 </div>
@@ -79,7 +81,7 @@
 
 
             <div class="movieTicketSelection">
-                <h2>Your Movie and Ticket Selection</h2>
+                <h1>Your Movie Ticket(s) Information</h1>
                 <div class="movieTicketInfo">
 
                     <div class="movieInfo">
@@ -105,9 +107,11 @@
 
 
                     <div class="movieSeats">
-                        <h2>Please choose a seat to book</h2>
+                        <h2>Please Choose Your Seat(s)</h2>
                         <form id="seats" action="action_page.php" method="post">
-                            <div class="screen"><h1>SCREEN</h1></div>
+                            <div class="screen">
+                                <h1>SCREEN</h1>
+                            </div>
                             <label for="A1"><input type="checkbox" name="vehicle-a1" id="A1">A1</label>
                             <label for="A2"><input type="checkbox" name="vehicle-a2" id="A2">A2</label>
                             <label for="A3"><input type="checkbox" name="vehicle-a3" id="A3">A3</label>
@@ -126,36 +130,53 @@
                             <label for="C4"><input type="checkbox" name="vehicle-c4" id="C4"> C4</label>
                             <label for="C5"><input type="checkbox" name="vehicle-c5" id="C5"> C5</label>
                             <label for="C6"><input type="checkbox" name="vehicle-c6" id="C6"> C6</label>
-                      
-                          <input type="hidden" name="total" id="hidden-total" value="0">
-                          <input type="hidden" name="seats" id="hidden-seats" value="0">
+
+                            <input type="hidden" name="total" id="hidden-total" value="0">
+                            <input type="hidden" name="seats" id="hidden-seats" value="0">
                         </form>
-                      </div>
+                    </div>
                 </div>
             </div>
 
 
             <div class="userResults">
                 <div class="checkout">
-                    <h2>Buy Ticket(s)</h2>
+                    <h1>Checkout Information</h1>
                     <div class="purchaseInfo">
-                        <div>
-                            <h3>Please enter your first and last name</h3>
-                            <input type="text" id="name" name="flname" placeholder="John Doe">
-
-                            <h3>Please enter your email address below</h3>
-                            <input type="email" id="myEmail" value="" placeholder="johndoe@gmail.com">
+                        <div class="userContact">
+                            <div>
+                                <h3>Please enter your first and last name</h3>
+                                <input type="text" id="name" name="flname" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <h3>Please enter your email address below</h3>
+                                <input type="email" id="myEmail" value="" placeholder="johndoe@gmail.com">
+                            </div>
                         </div>
 
-                        <div>
-                            <h3>Please enter your credit card information below</h3>
-                            Credit Card Number:
-                            <input id="ccNumber" type="text" name="cc-number" maxlength="16">
-                            <h3>Exiration Date</h3>
-                            <label>Month</label>
-                            <input id="month" type="text" name="cc-exp-month" maxlength="2" placeholder="00">
-                            <label>Year</label>
-                            <input id="year" type="text" name="cc-exp-year" maxlength="4" placeholder="0000">
+                       
+                            <h3>Please enter your credit card information below:</h3>
+                            <div class="cardInfo">
+                            <div>
+                                <label>Card Number:</label>
+                                <input id="ccNumber" type="text" name="cc-number" maxlength="16">
+                            </div>
+                            <div>
+    
+                                <div class="expire">
+                                    <div>
+                                        <label>Expiration Date</label>
+                                        <input type="month" id="expire" name="cardExpiry">
+                                        <!-- <input id="month" type="text" name="cc-exp-month" maxlength="2"
+                                            placeholder="00"> -->
+                                    </div>
+                                    <div>
+                                        <!-- <label>Expiry Year</label> -->
+                                        <!-- <input id="year" type="text" name="cc-exp-year" maxlength="4"
+                                            placeholder="0000"> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <button type="button" onClick="tellCheckout()">Purchase Ticket(s)</button>
